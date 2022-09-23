@@ -132,3 +132,36 @@ const add = (a, b) => a + b;
 	console.log('IIFE');
 })();
 //???????? wow
+
+//function calculate(command, a, b)
+//command: add, substract, divide, multiply, remainder
+
+const calculate = function(command, a, b) {
+		switch(command) {
+			case 'add':
+				console.log(a + b);
+				break;
+
+			case 'substract':
+				console.log(a - b);
+				break;
+
+			case 'divide':
+				console.log(a / b);
+				break;
+
+			case 'multiply':
+				console.log(a * b);
+				break;
+
+			case 'remainder':
+				console.log(a % b);
+				break;
+
+			default:
+				console.log('command: add / substrct / divide / multiply / remainder');
+		}
+}
+
+calculate('add', 1, 2);
+calculate('hello', 1, 2);
