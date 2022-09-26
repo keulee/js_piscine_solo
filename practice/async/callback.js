@@ -24,27 +24,52 @@ function printWithDelay(print, timeout) {
 
 printWithDelay(()=> console.log('async callback'), 2000);
 
-
+console.clear();
 //callback hell example
 class UserStorage {
 	loginUser(id, password, onSuccess, onError) {
 		setTimeout(()=> {
-		if (
-			(id === 'keulee' && password === 'dream') ||
-			(id === 'coder' && password === 'academy')
-		) {
-			onSuccess(id);
-		} else {
-			onError(new Error('not found'));
-		}
-
+			if (
+				(id === 'keulee' && password === 'dream') ||
+				(id === 'coder' && password === 'academy')
+			) {
+				onSuccess(id);
+			} else {
+				onError(new Error('not found'));
+			}
 		}, 2000);
-
 	}
 
 	getRoles(user, onSuccess, onError) {
-
+		setTimeout(() => {
+			if (user === 'keulee') {
+				onSuccess({
+					name: 'keulee',
+					role: 'admin'
+				})
+			} else {
+				onError(new Error('no access'));
+			}
+		}, 1000);
 	}
-
-
 }
+
+const userStorage = new UserStorage();
+const id = prompt('Enter your id');
+const passeworld = prompt('Enter your password');
+UserStorage.loginUser(
+	id,
+	password,
+	user => {
+		UserStorage.getRoles(
+			user,
+			userWithRole => {
+				alert(`Hello ${userWithRole.name}, you have a ${userWithRole.role} role`);
+			},
+			error => {
+				console.log(error);
+			}
+		);
+	},
+	error => {console.log(error)}
+);
