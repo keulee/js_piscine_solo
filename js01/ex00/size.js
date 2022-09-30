@@ -22,34 +22,27 @@ else
 
 time.innerHTML += `${hours}:${minutes}:${seconds}`;
 
+let ul = document.body.children[1].children[1];
+let screen = document.createElement('li');
+let outer = document.createElement('li');
+let inner = document.createElement('li');
+let docSize = document.createElement('li');
 
-
-// // const datetime = document.write("clock");
-
-
-// // console.log(dt);
-
-// function clock() {
-// 	let time = new Date();
-// 	let datetime = document.getElementsByTagName('time');
-// 	// let divClock = document.getElementById('datetime').time;
-
-// 	let hours = time.getHours();
-// 	let minutes = time.getMinutes();
-// 	let seconds = time.getSeconds();
-
-// 	let msg;
-
-// 	msg += `${hours}:${minutes}:${seconds}`;
-
-// 	// let month = time.getMonth();
-// 	// let date = time.getDate();
-// 	// let day = time.getDay();
-// 	// let week = []
-// 	// DataView.innerText = `hello`;
-// 	datetime.innerText = msg;
-// }
-// // clock();
+// outer += innerHTML += `hi`;
+// console.log(screen);
+// let width = window.innerWidth;
+screen.innerHTML += `Screen: ${screen.width} * ${screen.height}`;
+outer.innerHTML += `Window Outer: ${window.outerWidth} * ${window.outerHeight}`;
+inner.innerHTML += `Window Inner: ${window.innerWidth} * ${window.innerHeight}`;
+docSize.innerHTML += `Document: ${document.body.scrollWidth} * ${document.body.scrollHeight}`
+// ul.appendChild(screen);
+ul.append(screen);
+// ul.appendChild(outer);
+ul.append(outer);
+// ul.appendChild(inner);
+ul.append(inner);
+// ul.appendChild(docSize);
+ul.append(docSize);
 // // console.log(window.innerHeight);
 
 // const body = document.body;
@@ -77,5 +70,5 @@ time.innerHTML += `${hours}:${minutes}:${seconds}`;
 // console.log(div.innerText); //화면에 보이는 것을 인쇄
 
 // console.log(spanHi.setAttribute('id', "asdfad"));
-const doc = document.previousSibling;
-console.log(doc);
+// const doc = document.previousSibling;
+// console.log(doc);
