@@ -31,7 +31,7 @@ let docSize = document.createElement('li');
 // outer += innerHTML += `hi`;
 // console.log(screen);
 // let width = window.innerWidth;
-screen.innerHTML += `Screen: ${screen.width} * ${screen.height}`;
+screen.innerHTML += `Screen: ${window.screen.width} * ${window.screen.height}`;
 outer.innerHTML += `Window Outer: ${window.outerWidth} * ${window.outerHeight}`;
 inner.innerHTML += `Window Inner: ${window.innerWidth} * ${window.innerHeight}`;
 docSize.innerHTML += `Document: ${document.body.scrollWidth} * ${document.body.scrollHeight}`
