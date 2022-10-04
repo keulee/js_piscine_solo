@@ -11,12 +11,12 @@
 		<h1>Discount calculator</h1>
 	</header>
 	<main>
-		<form>
-			상품명: <input type="text" name="product"></br>
-			금액: <input type="number" name="price"></br>
-			멤버십 회원입니까? <input type="checkbox" name="member"></br>
+		<form name="product_form">
+			상품명: <input type="text" name="product" id="product" onkeyup='printProduct()'></br>
+			금액: <input type="number" name="price" id="price" onkeyup='printPrice()'></br>
+			멤버십 회원입니까? <input type="checkbox" name="member" id="member" onclick='memberCheck()'></br>
 			멤버십 등급:
-			<select>
+			<select id='level' disabled onchange='calculatePrice()'>
 				<option value="default">--선택--</option>
 				<option value="Lv1" data-percent="5">Lv1</option>
 				<option value="Lv2" data-percent="10">Lv2</option>
@@ -26,9 +26,9 @@
 		<hr></hr>
 		<time datetime=""></time></br>
 		<ul>
-			<li id="product">상품명: </li>
-			<li id="price">원가: </li>
-			<li id="discount">할인가: </li>
+			<li id="Tproduct">상품명: <span id='resultProduct'></span></li>
+			<li id="Tprice">원가: <span id='resultPrice'></span></li>
+			<li id="Tdiscount">할인가: <span id='resultFinalPrice'></span></li>
 		</ul>
 	</main>
 </body>
