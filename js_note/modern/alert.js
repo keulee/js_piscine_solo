@@ -121,19 +121,28 @@
 
 // console.log(addSalaire(salaires));
 
-function multiplyNumeric(obj) {
-    for (let key in obj) {
-        if (typeof obj[key] == 'number')
-            obj[key] *= 2;
-    }
+// function multiplyNumeric(obj) {
+//     for (let key in obj) {
+//         if (typeof obj[key] == 'number')
+//             obj[key] *= 2;
+//     }
+// }
+
+// let menu = {
+//     width: 200,
+//     height: 300,
+//     title: "My menu"
+//   };
+
+// multiplyNumeric(menu);
+
+// console.log(menu);
+
+const calculator = {
+    read : 
+
 }
 
-let menu = {
-    width: 200,
-    height: 300,
-    title: "My menu"
-  };
-
-multiplyNumeric(menu);
-
-console.log(menu);
+calculator.read();
+console.log(calculator.sum());
+console.log(calculator.mul());
